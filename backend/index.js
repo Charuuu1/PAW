@@ -15,10 +15,9 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 const corsOptions = {
-    origin:["http://deploy-mern-1whq.vercel.app"],
+    origin: '*',
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Authorization,, Content-Type',
-    credentials: true
     // preflightContinue: false
 };
 app.get('/', (req, res) => {
