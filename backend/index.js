@@ -13,6 +13,15 @@ const bookingRoute = require("./Routes/booking.js");
 dotenv.config();
 
 const app = express();
+app.use(cors(
+    {
+     origin:["http://deploy-mern-1whq.vercel.app"],
+     methods:["POST","GET"],
+     credentials: true  
+    }
+    ));
+app.use(express.json())
+mongoose.connect('mongodb+srv://kanikabansal:kanika717bansal@cluster0.j8j1p7u.mongodb.net/pawcure-backend?retryWrites=true&w=majority&appName=Cluster0');
 const port = process.env.PORT || 8000;
 const corsOptions = {
     origin: '*',
