@@ -21,7 +21,6 @@ app.use(cors(
     }
     ));
 app.use(express.json())
-mongoose.connect('mongodb+srv://kanikabansal:kanika717bansal@cluster0.j8j1p7u.mongodb.net/pawcure-backend?retryWrites=true&w=majority&appName=Cluster0');
 const port = process.env.PORT || 8000;
 const corsOptions = {
     origin: '*',
