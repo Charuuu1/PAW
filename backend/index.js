@@ -13,19 +13,12 @@ const bookingRoute = require("./Routes/booking.js");
 dotenv.config();
 
 const app = express();
-app.use(cors(
-    {
-     origin:["http://deploy-mern-1whq.vercel.app"],
-     methods:["POST","GET"],
-     credentials: true  
-    }
-    ));
-app.use(express.json())
 const port = process.env.PORT || 8000;
 const corsOptions = {
-    origin: '*',
+    origin:["http://deploy-mern-1whq.vercel.app"],
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Authorization,, Content-Type',
+    credentials: true
     // preflightContinue: false
 };
 app.get('/', (req, res) => {
